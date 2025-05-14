@@ -41,7 +41,7 @@ function login() {
 }
 
 function startWebSocket() {
-  const socket = new WebSocket("wss://itok.onrender.com");
+  socket = new WebSocket("wss://itok.onrender.com");
 
   socket.onopen = () => {
     socket.send(JSON.stringify({ type: "auth", token }));
